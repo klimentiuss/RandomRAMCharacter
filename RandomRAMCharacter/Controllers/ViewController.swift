@@ -51,10 +51,6 @@ extension ViewController {
             
             guard let data = data else { return }
             
-            //MARK: - Testing work JSON | Delete after test
-            let jsonString = String(data: data, encoding: .utf8)
-            print(jsonString ?? "FUCK")
-            
             do {
                 let someCharacter = try JSONDecoder().decode(Character.self, from: data)
                 print(someCharacter.image ?? "No desc")
